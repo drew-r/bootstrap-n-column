@@ -1,0 +1,91 @@
+// set the screen size variables 
+@screen-sm-min: 768px;
+@screen-md-min: 992px;
+@screen-lg-min: 1200px;
+
+// or import them from bootstrap
+// @import (reference) './bootstrap-3.3.1/less/bootstrap.less';
+
+
+.col(@numCols, @colIdx){
+	width: (100% / @numCols) * @colIdx;
+    float: left !important;	
+}
+.col-offset(@numCols, @colIdx){
+	margin-left: (100% / @numCols) * @colIdx;
+}
+.col-push(@numCols, @colIdx){
+		left: (100% / @numCols) * @colIdx;
+}
+.col-pull(@numCols, @colIdx){
+    	right: (100% / @numCols) * @colIdx;
+}
+
+.col-set(@numCols)
+{
+	.col-@{numCols} {
+	    .cols (@colIdx) when (@colIdx <= @numCols) {
+	    	.col-xs-@{colIdx} {
+	    		.col(@numCols, @colIdx);
+	    	}
+	    	.col-xs-offset-@{colIdx} {
+	    		.col-offset(@numCols, @colIdx);
+	    	}
+    		.col-xs-push-@{colIdx} {
+    			.col-push(@numCols, @colIdx);
+    		}
+    		.col-xs-pull-@{colIdx} {
+    			.col-pull(@numCols, @colIdx);
+    		}
+	    	@media (min-width: @screen-sm-min) {
+	    		.col-sm-@{colIdx} {
+	    			.col(@numCols, @colIdx);
+	    		}
+	    		.col-sm-offset-@{colIdx} {
+	    			.col-offset(@numCols, @colIdx);
+	    		}
+	    		.col-sm-push-@{colIdx} {
+	    			.col-push(@numCols, @colIdx);
+	    		}
+	    		.col-sm-pull-@{colIdx} {
+	    			.col-pull(@numCols, @colIdx);
+	    		}
+			}
+			@media (min-width: @screen-md-min) {
+				.col-md-@{colIdx} {
+	    			.col(@numCols, @colIdx);
+	    		}
+	    		.col-md-offset-@{colIdx} {
+	    			.col-offset(@numCols, @colIdx);
+	    		}
+	    		.col-md-push-@{colIdx} {
+	    			.col-push(@numCols, @colIdx);
+	    		}
+	    		.col-md-pull-@{colIdx} {
+	    			.col-pull(@numCols, @colIdx);
+	    		}	
+			}
+			@media (min-width: @screen-lg-min) {
+				.col-lg-@{colIdx} {
+	    			.col(@numCols, @colIdx);
+	    		}
+	    		.col-lg-offset-@{colIdx} {
+	    			.col-offset(@numCols, @colIdx);
+	    		}
+	    		.col-lg-push-@{colIdx} {
+	    			.col-push(@numCols, @colIdx);
+	    		}
+	    		.col-lg-pull-@{colIdx} {
+	    			.col-pull(@numCols, @colIdx);
+	    		}
+			}
+
+	        .cols(@colIdx+1);
+	    }
+	    .cols(1);
+	}
+}
+
+// generate your additional grids
+.col-set(13);
+.col-set(14);
