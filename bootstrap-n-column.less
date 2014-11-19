@@ -51,9 +51,9 @@
 	    			.col-pull(@numCols, @colIdx);
 	    		}
 			}
-			@media (min-width: @screen-md-min) {
-				.col-md-@{colIdx} {
-	    			.col(@numCols, @colIdx);
+		@media (min-width: @screen-md-min) {
+			.col-md-@{colIdx} {
+    				.col(@numCols, @colIdx);
 	    		}
 	    		.col-md-offset-@{colIdx} {
 	    			.col-offset(@numCols, @colIdx);
@@ -64,9 +64,9 @@
 	    		.col-md-pull-@{colIdx} {
 	    			.col-pull(@numCols, @colIdx);
 	    		}	
-			}
-			@media (min-width: @screen-lg-min) {
-				.col-lg-@{colIdx} {
+		}
+		@media (min-width: @screen-lg-min) {
+			.col-lg-@{colIdx} {
 	    			.col(@numCols, @colIdx);
 	    		}
 	    		.col-lg-offset-@{colIdx} {
@@ -78,7 +78,7 @@
 	    		.col-lg-pull-@{colIdx} {
 	    			.col-pull(@numCols, @colIdx);
 	    		}
-			}
+		}
 
 	        .cols(@colIdx+1);
 	    }
