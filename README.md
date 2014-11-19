@@ -1,4 +1,4 @@
-bootstrap-column-sets
+bootstrap-n-column
 =====================
 
 LESS mixins for n-column Bootstrap 3 grids
