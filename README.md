@@ -37,5 +37,5 @@ e.g
 </div>
 ```
 
-
+Put this together as I couldn't find anything existing that didn't require Javascript or modifying Bootstrap itself. Here's hoping it will save someone else some time.
 
