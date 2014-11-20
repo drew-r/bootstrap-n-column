@@ -1,0 +1,23 @@
+{
+  "name": "bootstrap-n-column",
+  "version": "0.1.0",
+  "homepage": "https://github.com/drew-r/bootstrap-n-column",
+  "authors": [
+    "drew-r <drewrathbone@gmail.com>"
+  ],
+  "description": "Less mixins for n-column Bootstrap 3 grids",
+  "main": "bootstrap-n-column.less",
+  "keywords": [
+    "bootstrap",
+    "grid",
+    "less"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
