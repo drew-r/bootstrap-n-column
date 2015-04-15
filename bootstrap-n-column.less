@@ -23,7 +23,7 @@
 
 .col-set(@numCols) {
 	.col-@{numCols} {
-	    .cols-xs (@colIdx) when (@colIdx <= @numCols) {
+	    .cols-xs (@colIdx) when (@colIdx =< @numCols) {
 	    	>.col-xs-@{colIdx} {
 	    		.col(@numCols, @colIdx);
 	    	}
@@ -37,7 +37,7 @@
 				.col-pull(@numCols, @colIdx);
 			}
 		}
-		.cols-sm (@colIdx) when (@colIdx <= @numCols) {
+		.cols-sm (@colIdx) when (@colIdx =< @numCols) {
 		   	>.col-sm-@{colIdx} {
     			.col(@numCols, @colIdx);
     		}
@@ -52,7 +52,7 @@
     		}					
 			.cols-sm(@colIdx + 1);
 		}
-		.cols-md (@colIdx) when (@colIdx <= @numCols) {
+		.cols-md (@colIdx) when (@colIdx =< @numCols) {
 			>.col-md-@{colIdx} {
 				.col(@numCols, @colIdx);
     		}
@@ -68,7 +68,7 @@
 			
 			.cols-md(@colIdx + 1);
 		}
-		.cols-lg (@colIdx) when (@colIdx <= @numCols) {
+		.cols-lg (@colIdx) when (@colIdx =< @numCols) {
 			
 			>.col-lg-@{colIdx} {
     			.col(@numCols, @colIdx);
