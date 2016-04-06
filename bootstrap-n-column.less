@@ -38,6 +38,8 @@
 			>.col-xs-pull-@{colIdx} {
 				.col-pull(@numCols, @colIdx);
 			}
+
+			.cols-xs(@colIdx + 1);
 		}
 
 		.cols-sm(@colIdx) when (@colIdx =< @numCols) {
@@ -53,6 +55,7 @@
 			>.col-sm-pull-@{colIdx} {
 				.col-pull(@numCols, @colIdx);
 			}
+
 			.cols-sm(@colIdx + 1);
 		}
 
@@ -74,7 +77,6 @@
 		}
 
 		.cols-lg(@colIdx) when (@colIdx =< @numCols) {
-
 			>.col-lg-@{colIdx} {
 				.col(@numCols, @colIdx);
 			}
