@@ -1,4 +1,4 @@
-// set the screen size variables 
+// set the screen size variables
 @screen-sm-min: 768px;
 @screen-md-min: 992px;
 @screen-lg-min: 1200px;
@@ -6,30 +6,32 @@
 // or import them from bootstrap
 // @import (reference) './bootstrap-3.3.1/less/bootstrap.less';
 
-
 .col(@numCols, @colIdx){
 	width: (100% / @numCols) * @colIdx;
-    float: left;	
+	float: left;
 }
+
 .col-offset(@numCols, @colIdx){
 	margin-left: (100% / @numCols) * @colIdx;
 }
+
 .col-push(@numCols, @colIdx){
 	left: (100% / @numCols) * @colIdx;
 }
+
 .col-pull(@numCols, @colIdx){
 	right: (100% / @numCols) * @colIdx;
 }
 
 .col-set(@numCols) {
 	.col-@{numCols} {
-	    .cols-xs (@colIdx) when (@colIdx =< @numCols) {
-	    	>.col-xs-@{colIdx} {
-	    		.col(@numCols, @colIdx);
-	    	}
-	    	>.col-xs-offset-@{colIdx} {
-	    		.col-offset(@numCols, @colIdx);
-	    	}
+		.cols-xs (@colIdx) when (@colIdx =< @numCols) {
+			>.col-xs-@{colIdx} {
+				.col(@numCols, @colIdx);
+			}
+			>.col-xs-offset-@{colIdx} {
+				.col-offset(@numCols, @colIdx);
+			}
 			>.col-xs-push-@{colIdx} {
 				.col-push(@numCols, @colIdx);
 			}
@@ -37,59 +39,62 @@
 				.col-pull(@numCols, @colIdx);
 			}
 		}
-		.cols-sm (@colIdx) when (@colIdx =< @numCols) {
+
+		.cols-sm(@colIdx) when (@colIdx =< @numCols) {
 		   	>.col-sm-@{colIdx} {
-    			.col(@numCols, @colIdx);
-    		}
-    		>.col-sm-offset-@{colIdx} {
-    			.col-offset(@numCols, @colIdx);
-    		}
-    		>.col-sm-push-@{colIdx} {
-    			.col-push(@numCols, @colIdx);
-    		}
-    		>.col-sm-pull-@{colIdx} {
-    			.col-pull(@numCols, @colIdx);
-    		}					
+				.col(@numCols, @colIdx);
+			}
+			>.col-sm-offset-@{colIdx} {
+				.col-offset(@numCols, @colIdx);
+			}
+			>.col-sm-push-@{colIdx} {
+				.col-push(@numCols, @colIdx);
+			}
+			>.col-sm-pull-@{colIdx} {
+				.col-pull(@numCols, @colIdx);
+			}
 			.cols-sm(@colIdx + 1);
 		}
-		.cols-md (@colIdx) when (@colIdx =< @numCols) {
+
+		.cols-md(@colIdx) when (@colIdx =< @numCols) {
 			>.col-md-@{colIdx} {
 				.col(@numCols, @colIdx);
-    		}
-    		>.col-md-offset-@{colIdx} {
-    			.col-offset(@numCols, @colIdx);
-    		}
-    		>.col-md-push-@{colIdx} {
-    			.col-push(@numCols, @colIdx);
-    		}
-    		>.col-md-pull-@{colIdx} {
-    			.col-pull(@numCols, @colIdx);
-    		}	
-			
+			}
+			>.col-md-offset-@{colIdx} {
+				.col-offset(@numCols, @colIdx);
+			}
+			>.col-md-push-@{colIdx} {
+				.col-push(@numCols, @colIdx);
+			}
+			>.col-md-pull-@{colIdx} {
+				.col-pull(@numCols, @colIdx);
+			}
+
 			.cols-md(@colIdx + 1);
 		}
-		.cols-lg (@colIdx) when (@colIdx =< @numCols) {
-			
+
+		.cols-lg(@colIdx) when (@colIdx =< @numCols) {
+
 			>.col-lg-@{colIdx} {
-    			.col(@numCols, @colIdx);
-    		}
-    		>.col-lg-offset-@{colIdx} {
-    			.col-offset(@numCols, @colIdx);
-    		}
-    		>.col-lg-push-@{colIdx} {
-    			.col-push(@numCols, @colIdx);
-    		}
-    		>.col-lg-pull-@{colIdx} {
-    			.col-pull(@numCols, @colIdx);
-    		}
-				
-	        .cols-lg(@colIdx+1);
+				.col(@numCols, @colIdx);
+			}
+			>.col-lg-offset-@{colIdx} {
+				.col-offset(@numCols, @colIdx);
+			}
+			>.col-lg-push-@{colIdx} {
+				.col-push(@numCols, @colIdx);
+			}
+			>.col-lg-pull-@{colIdx} {
+				.col-pull(@numCols, @colIdx);
+			}
+
+			.cols-lg(@colIdx + 1);
 		}
 
 		.cols-xs(1);
 		@media (min-width: @screen-sm-min) {
-			.cols-sm(1);	    		
-    	}
+			.cols-sm(1);
+		}
 
 		@media (min-width: @screen-md-min) {
 			.cols-md(1);
